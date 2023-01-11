@@ -1,0 +1,19 @@
+CSS Grid 
+Javascript Basics
+
+
+grid container 
+grid-template-columns
+
+
+
+justify properties 
+justify-items
+justify-content
+justify-self
+
+
+align properties 
+align-items
+align-content
+align-self

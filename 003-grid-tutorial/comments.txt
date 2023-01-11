@@ -1,0 +1,22 @@
+ /* height: 900px; */
+/* grid-template-columns: repeat(3, 1fr); */
+/* row-gap: 0.5rem;
+column-gap: 0.5rem; */
+/* gap: 1rem 5rem; */
+
+/* grid-template-columns: 1fr 1fr 1fr; */
+/* height: 900px; */
+/* handle implicit rows  */
+/* implicit : automatically  */
+/* explicit  : user  */
+
+grid-auto-flow: column;
+    grid-auto-columns: 100px;
+
+ /* grid-template-columns: repeat(3, 1fr); */
+
+    /* variable no of columns  */
+
+ /* varibale no of columns and variable width of items */
+    /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+}
