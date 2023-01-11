@@ -1,0 +1,26 @@
+body {
+    font-family: sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: antiquewhite;
+    border: 10px solid brown;
+    height: 500px;
+    position: relative;
+}
+
+.container h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    top: 4px;
+    width: 200px;
+    border: 2px solid red;
+    background-color: black;
+    color: lightblue;
+    transform: translate(-50%, -50%);
+}

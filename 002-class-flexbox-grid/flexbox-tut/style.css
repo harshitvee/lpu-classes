@@ -1,0 +1,29 @@
+body {
+    font-family: sans-serif;
+}
+.container {
+    display: flex;
+    border: 8px solid brown;
+    max-width: 1200px;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 600px;
+    align-items: center;
+    gap: 1rem;
+}
+
+.box {
+    border: 1px solid black;
+    flex: 1 1 400px;
+}
+
+.box1 {
+    background: lightblue;
+}
+
+.box2 {
+    background: lightcoral;
+}
+.box3 {
+    background: lightgoldenrodyellow;
+}

@@ -1,0 +1,28 @@
+dynamic navbar 
+hide element on clicking outside
+gradient on background photo
+smooth scroll on click
+tabs widget
+accordian 
+image slider 
+photo gallery 
+mobile navigation 
+responsive website with media queries
+integrate 3rd party libs 
+authenication 
+footer 
+modal
+tesla site 
+animations
+use external api to see live changes 
+filters on ecommerce 
+search bar 
+loading bar 
+website themes 
+change positions on clicking 
+columns for ad 
+animate on reaching element (intersection observer)
+parallex effect 
+
+https://www.moooi.com/en/a-life-extraordinary
+

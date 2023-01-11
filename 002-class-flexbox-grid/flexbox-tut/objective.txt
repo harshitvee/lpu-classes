@@ -1,0 +1,15 @@
+css positions + flexbox + project 
+
+
+flex container properties 
+1. flex direction 
+2. flex wrap 
+3. justify content 
+4. align items 
+
+flex items properties
+flex basis  
+flex grow 
+flex shrink 
+order 
+flex 
