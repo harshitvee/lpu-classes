@@ -1,0 +1,38 @@
+Hello world program
+Declare variable using var
+More about variable
+Let
+Const
+String Indexing
+Useful string methods
+Template Strings
+Null, undefined, BigInt, typeof
+Booleans and Comparison Operator
+Truthy and Falsy Values
+If else statement
+Ternary Operator
+&& || operator
+Nested if else
+If elseif else
+Switch statement
+While loop 
+While loop examples
+For loop
+For loop examples
+Break and continue keyword
+Do while loop
+
+
+
+
+
+Intro to arrays
+Push pop shift unshift
+Primitive vs reference data types
+Clone array & spread operator
+For loop
+use const for creating arrays
+While loop in array
+For of loop
+For in loop
+Array destructuring
