@@ -1,0 +1,23 @@
+// CSS
+//  Box model : padding, margin, border
+// diff between block , inline, inline-block
+// rem , em, px, %
+// rgb, hex code, rgba, hsl
+// how to center a div
+// flexbox properties
+// grid properites
+
+// Javascript
+
+// let vs var vs const
+// for of, for in
+// how can we use const in arrays
+// primitive vs reference types
+// computed properties
+
+// array destructuring 
+// spread operator in array
+// spread operator in object
+
+// object destructuring
+

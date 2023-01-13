@@ -167,10 +167,10 @@
 // console.log(fruits);
 // console.log(fruits2);
 
-const myArray = [1, 2, 3];
-myArray.push(2);
-// myArray = [];
-console.log(myArray);
+// const myArray = [1, 2, 3];
+// myArray.push(2);
+// // myArray = [];
+// console.log(myArray);
 
 // stack
 // -----------------------------------------
