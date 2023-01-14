@@ -186,12 +186,12 @@ const value2 = "Doe";
 
 // object destructuring
 
-const musicBand = {
-    bandName: "ac/dc",
-    famousSong: "thunderstruck",
-};
+// const musicBand = {
+//     bandName: "ac/dc",
+//     famousSong: "thunderstruck",
+// };
 
-const { bandName, famousSong } = musicBand;
+// const { bandName, famousSong } = musicBand;
 
-console.log(bandName);
-console.log(famousSong);
+// console.log(bandName);
+// console.log(famousSong);
