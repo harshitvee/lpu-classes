@@ -112,7 +112,7 @@ const greet6 = firstName => `Hello ${firstName}`;
 
 // using map method 
 
-const usernames = ['Harshit', 'John', 'Mohit'];
+// const usernames = ['Harshit', 'John', 'Mohit'];
 
 // function getFirstChar(item) {
 //     return item[0];
@@ -136,16 +136,18 @@ const usernames = ['Harshit', 'John', 'Mohit'];
 
 // map method with arrow function  ******************* 
 
-const initials3 = usernames.map((item)=>{
-    return item[0]
-}) 
+// const initials3 = usernames.map((item)=>{
+//     return item[0]
+// }) 
 
-// map method with arrow functions and implicit return 
-
-
-const initials4 = usernames.map((item) => item[0]) 
+// // map method with arrow functions and implicit return 
 
 
-const initials5 = usernames.map(item => item[0]) 
+// const initials4 = usernames.map((item) => item[0]) 
 
-console.log(initials4);
+
+// const initials5 = usernames.map(item => item[0]) 
+
+// console.log(initials4);
+
+
