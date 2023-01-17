@@ -86,24 +86,37 @@
 
 
 
-const colors = ["blue", 'orange', 'purple', 'lightpink', 'pink', "violet"];
 
-const btn = document.getElementById("changeBgBtn")
-const body = document.body;
+// const btn = document.getElementById("changeBgBtn")
+// const body = document.body;
 
-const colorVal = document.querySelector(".color-value");
-
-
-const generateRandomColor = () => {
-    const red = Math.floor(Math.random() * 256);
-    const green = Math.floor(Math.random() * 256);
-    const blue = Math.floor(Math.random() * 256);
-    return `rgb(${red}, ${green}, ${blue})`;
-}
+// const colorVal = document.querySelector(".color-value");
 
 
-btn.addEventListener("click" , () => {
-    const randomColor = generateRandomColor();
-    body.style.background = randomColor;
-    colorVal.textContent = randomColor;
-})
+// const generateRandomColor = () => {
+//     const red = Math.floor(Math.random() * 256);
+//     const green = Math.floor(Math.random() * 256);
+//     const blue = Math.floor(Math.random() * 256);
+//     return `rgb(${red}, ${green}, ${blue})`;
+// }
+
+
+// btn.addEventListener("click" , () => {
+//     const randomColor = generateRandomColor();
+//     body.style.background = randomColor;
+//     colorVal.textContent = randomColor;
+// })
+
+
+// synchronous 
+// javascript is scynchronous programming lang 
+// single thread 
+
+
+// asynchronous programming
+// browser provide these features 
+
+// setTimeout
+
+
+``
