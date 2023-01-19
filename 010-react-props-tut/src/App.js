@@ -1,11 +1,13 @@
 import React from "react";
-import Navbar from "./components/Navbar";
+
 import Greeting from "./components/Greeting";
 function App() {
     return (
         <>
-            <Navbar />
             <Greeting firstName="Harshit" lastName="Vashistha" />
+            <Greeting firstName="John" lastName="Doe" />
+            <Greeting firstName="Jane" lastName="Doe" />
+            <Greeting firstName="Mohit" lastName="Vashistha" />
         </>
     );
 }

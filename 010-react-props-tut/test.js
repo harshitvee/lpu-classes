@@ -1,5 +1,13 @@
-function greeting(name) {
-    console.log(`Hello ${name}, how are you ? `);
-}
+// function greeting(props) {
+//     console.log(`hello, ${props.firstName} ${props.lastName} how are you ? `);
+// }
+// greeting({ firstName: "Harshit", lastName: "Vashisth" });
+// greeting({ firstName: "Mohit", lastName: "Vashisth" });
+// greeting({ firstName: "Nitish", lastName: "Vashisth" });
+// greeting({ firstName: "Aditya", lastName: "Vashisth" });
 
-greeting("Harshit");
+// ternary operator
+const isError = true;
+
+const className = isError ? "there is an error" : "no Errors!!";
+console.log(className);
