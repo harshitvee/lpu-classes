@@ -1,13 +1,20 @@
 import React from "react";
 
+import Card from "./components/Card";
 import Greeting from "./components/Greeting";
+
 function App() {
     return (
         <>
-            <Greeting firstName="Harshit" lastName="Vashistha" />
-            <Greeting firstName="John" lastName="Doe" />
-            <Greeting firstName="Jane" lastName="Doe" />
-            <Greeting firstName="Mohit" lastName="Vashistha" />
+            <Card>
+                <Greeting firstName="Harshit" lastName="Vashistha" />
+            </Card>
+            <Card>
+                <Greeting firstName="Harshit" lastName="Vashistha" />
+            </Card>
+            <Card>
+                <Greeting firstName="Harshit" lastName="Vashistha" />
+            </Card>
         </>
     );
 }
