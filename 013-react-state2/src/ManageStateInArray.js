@@ -1,0 +1,33 @@
+import React, { useState } from "react";
+import { v4 as uuid } from "uuid";
+function ManageStateInArray() {
+    // const todos = ["watch movie", "study guitar", "play cricket"];
+    const [todos, setTodos] = useState([
+        "watch movie",
+        "study guitar",
+        "play cricket",
+    ]);
+    function handleNewTodo() {
+        // const newArray = [...todos];
+        // newArray.push("new Todo");
+        // setTodos(newArray);
+
+        setTodos((prevTodos) => {
+            return [...prevTodos, "new Todo"];
+        });
+    }
+    return (
+        <div>
+            <h1>Manage State in Arrays</h1>
+            <ul>
+                {todos.map((todo) => {
+                    return <li key={uuid()}>{todo}</li>;
+                })}
+            </ul>
+
+            <button onClick={handleNewTodo}>Add new todo</button>
+        </div>
+    );
+}
+
+export default ManageStateInArray;
