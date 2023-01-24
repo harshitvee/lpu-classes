@@ -1,21 +1,10 @@
-import React, { useState } from "react";
-
+import React from "react";
+// import Counter from "./components/Counter";
+import ManageStateInArray from "./ManageStateInArray";
 function App() {
-    const [myObject, setMyObject] = useState({
-        key1: "value1",
-        key2: "value2",
-        key3: "value3",
-    });
-    function handleNewKeyValuePair() {
-        const newObj = { ...myObject, key4: "value4" };
-        setMyObject(newObj);
-    }
     return (
         <div>
-            <h1>Manage State in Objects</h1>
-            <button onClick={handleNewKeyValuePair}>
-                Add New Key Value Pair
-            </button>
+            <ManageStateInArray />
         </div>
     );
 }

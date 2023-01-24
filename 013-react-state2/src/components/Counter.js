@@ -1,44 +1,39 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-// first rule of hook
-
-// setState callback function
 function Counter() {
     const [count, setCount] = useState(0);
-
     // function handleIncrease() {
-    //     // setCount(count + 1); // number, string
-    //     // setCount((previousState) => {
-    //     //     return previousState + 1;
+    //     // setCount(count + 1); // primitive
+
+    //     // callback function
+
+    //     // setCount((prevCount) => {
+    //     //     return prevCount + 1;
     //     // });
 
     //     // implicit return
     //     setCount((prevCount) => prevCount + 1);
     // }
+    function handleDecrease() {
+        setCount((prevCount) => prevCount - 1);
+    }
     function handleReset() {
         setCount(0);
     }
-    function handleDecrease() {
-        // setCount(count - 1);
-        // setCount((previousState) => {
-        //     return previousState - 1;
-        // });
-        // implicit return
-        setCount((prevCount) => prevCount - 1);
-    }
     return (
-        <div className="counter">
-            <h1> Count : {count}</h1>
+        <>
+            <h1>counter app</h1>
+            <h1>{count}</h1>
             <button
                 onClick={() => {
-                    setCount((prevState) => prevState + 1);
+                    setCount((prevCount) => prevCount + 1);
                 }}
             >
                 Increase
             </button>
             <button onClick={handleReset}>Reset</button>
             <button onClick={handleDecrease}>Decrease</button>
-        </div>
+        </>
     );
 }
 

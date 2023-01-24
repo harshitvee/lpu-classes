@@ -1,0 +1,26 @@
+form {
+    display: flex;
+    background-color: #f5f6fa;
+    align-items: center;
+    padding: 0.3rem;
+    border-radius: 0.2rem;
+    justify-content: space-between;
+}
+
+input[type="text"] {
+    flex-basis: 80%;
+    background-color: inherit;
+    border: none;
+    padding: 0.2rem;
+    outline: none;
+}
+
+input[type="submit"] {
+    background: #fff;
+    background-color: #192a56;
+    color: #f5f6fa;
+    height: fit-content;
+    border: none;
+    padding: 0.3rem;
+    cursor: pointer;
+}
