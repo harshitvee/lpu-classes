@@ -13,7 +13,6 @@ function TodoInputForm({ addTodo }) {
         <form className="container" onSubmit={handleSubmit}>
             <input
                 type="text"
-                id="newTodo"
                 value={newTodo}
                 onChange={(e) => {
                     setNewTodo(e.target.value);

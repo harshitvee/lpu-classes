@@ -1,6 +1,26 @@
 .todo {
     margin-bottom: 1rem;
     background: #273c75;
-    padding: 0.5rem;
+    padding: 0.3rem;
     border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button-wrapper {
+    display: flex;
+    gap: 0.3rem;
+}
+
+button {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.9rem;
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.todoName {
+    text-transform: capitalize;
 }
