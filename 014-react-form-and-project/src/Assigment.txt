@@ -1,0 +1,35 @@
+Assignment 1
+Submit Date : 28 Jan 2023
+
+source code : https://github.com/harshitvee/lpu-classes/tree/main/014-react-form-and-project
+
+Clone this repo 
+
+Run npm install 
+
+Tasks 1: 
+
+Add completed functionality 
+
+when user clicks on "complete button "
+then apply 
+1.) strike through style on todo 
+2.) reduce the opacity of todo 
+3.) Change the text of "complete button" to "incomplete"
+
+When user click on incomplete
+then remove 
+1. strike through 
+2. set opacity to 1 
+3. Change the text of "incomplete button" to "complete"
+
+Tasks 2:
+
+Add "Delete All Todos" at the end of page 
+
+On click "Delete All todos" all todo should delete 
+
+
+Opational Task 
+Task 3 
+Add Edit todo button 
