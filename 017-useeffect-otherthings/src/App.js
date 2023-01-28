@@ -1,37 +1,42 @@
-import "./App.css";
 import { useState, useEffect } from "react";
-// react hooks starts with 'use'
+import "./App.css";
 
-// when state changes component re-render
+const URL = "https://jsonplaceholder.typicode.com/posts";
 
-// useEffect
-// useEffect can take 2 things as input
-// 1. Callback function
-// 2. Dependency Array
-
-// Case 1
-// useEffect without dependency array , useEffect( ()=> {})
-// callback function will run after every render
+// async await
 function App() {
-    const [count, setCount] = useState(0);
-    useEffect(() => {
-        console.log("useEffect Callback Function");
-    });
-    return (
-        <div className="App">
-            <h1>use effect tutorial</h1>
+    const [posts, setPosts] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    async function fetchData() {
+        const response = await fetch(URL);
+        const data = await response.json();
+        // console.log(data);
+        // setState
 
-            <h2>counter app to change state</h2>
-            <h3>{count}</h3>
-            <button
-                onClick={() => {
-                    setCount((count) => count + 1);
-                }}
-            >
-                Increase Count (change State)
-            </button>
-        </div>
-    );
+        setPosts(data);
+        setIsLoading(false);
+    }
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    if (isLoading) {
+        return <h1>Loading .....</h1>;
+    } else {
+        return (
+            <>
+                {posts.map((post) => {
+                    return (
+                        <article>
+                            <h3>{post.title}</h3>
+                            <p>{post.body}</p>
+                        </article>
+                    );
+                })}
+            </>
+        );
+    }
 }
 
 export default App;
