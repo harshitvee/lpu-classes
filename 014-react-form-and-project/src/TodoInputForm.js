@@ -5,6 +5,10 @@ function TodoInputForm({ addTodo }) {
     const [newTodo, setNewTodo] = useState("");
     function handleSubmit(e) {
         e.preventDefault();
+        if (newTodo.trim().length === 0) {
+            alert("Enter some value");
+            return;
+        }
         const newTodoObj = { id: uuid(), todoName: newTodo, completed: false };
         addTodo(newTodoObj);
         setNewTodo("");

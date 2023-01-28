@@ -11,9 +11,6 @@ function App() {
     ]);
 
     function toggleCompleted(id) {
-        // console.log(id);
-        // id == 2
-
         setTodos((prevTodos) => {
             return prevTodos.map((todoObj) => {
                 if (todoObj.id === id) {
@@ -64,6 +61,7 @@ function App() {
     }
     return (
         <>
+            <div className="toast">Enter some value</div>
             <h1 style={{ textAlign: "center" }}>Todo List App</h1>
             <TodoInputForm addTodo={addTodo} />
             <div className="container">
