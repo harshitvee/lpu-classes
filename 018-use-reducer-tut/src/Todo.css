@@ -1,0 +1,10 @@
+.todo {
+    border: 2px solid black;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.8;
+}
