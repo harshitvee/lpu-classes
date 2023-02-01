@@ -21,6 +21,15 @@ const reducer = (todos, action) => {
             }
         });
     }
+    if (action.type === "EDIT_TODO") {
+        return todos.map((todo) => {
+            if (todo.id === action.payload.id) {
+                return { ...todo, title: action.payload.newTitle };
+            } else {
+                return todo;
+            }
+        });
+    }
     if (action.type === "ADD_TODO") {
         return [...todos, action.payload.newTodo];
     }
