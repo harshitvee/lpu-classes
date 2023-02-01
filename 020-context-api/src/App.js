@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useReducer, createContext } from "react";
 import Todos from "./Todos";
 import AddTodoForm from "./AddTodoForm";
 import "./App.css";
@@ -6,6 +6,7 @@ import "./App.css";
 // prop drilling
 
 // context api to avoid prop drilling
+const TodoContext = createContext();
 
 const initialState = [
     { id: "1", title: "Learn Guitar", completed: false },
@@ -42,12 +43,14 @@ const reducer = (todos, action) => {
 function App() {
     const [todos, dispatch] = useReducer(reducer, initialState);
     return (
-        <div className="App">
-            <h1>Todo App</h1>
-            <AddTodoForm dispatch={dispatch} />
-            <Todos todos={todos} dispatch={dispatch} />
-        </div>
+        <TodoContext.Provider value={{ dispatch: dispatch }}>
+            <div className="App">
+                <h1>Todo App</h1>
+                <AddTodoForm />
+                <Todos todos={todos} />
+            </div>
+        </TodoContext.Provider>
     );
 }
-
+export { TodoContext };
 export default App;

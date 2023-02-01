@@ -1,6 +1,7 @@
-import { useState } from "react";
-
-function EditForm({ title, dispatch, id, setIsEditingToFalse }) {
+import { useState, useContext } from "react";
+import { TodoContext } from "./App";
+function EditForm({ title, id, setIsEditingToFalse }) {
+    const { dispatch } = useContext(TodoContext);
     const [newTitle, setNewTitle] = useState(title);
     const handleSubmit = (e) => {
         e.preventDefault();
