@@ -14,6 +14,9 @@ function Root() {
                     <li>
                         <Link to="contact">Contact</Link>
                     </li>
+                    <li>
+                        <Link to="products">Products</Link>
+                    </li>
                 </ul>
             </nav>
             <section>
