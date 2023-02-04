@@ -1,7 +1,7 @@
 import "./App.css";
 import { useReducer } from "react";
 import MovieSearch from "./MovieSearch";
-
+import Movies from "./Movies";
 function reducer(movies, action) {
     if (action.type === "ADD_MOVIES") {
         return [...movies, ...action.payload.movies];
@@ -13,6 +13,7 @@ function App() {
     return (
         <div className="App">
             <MovieSearch dispatch={dispatch} />
+            <Movies movies={movies} />
         </div>
     );
 }
