@@ -4,7 +4,7 @@ import MovieSearch from "./MovieSearch";
 import Movies from "./Movies";
 function reducer(movies, action) {
     if (action.type === "ADD_MOVIES") {
-        return [...movies, ...action.payload.movies];
+        return [...action.payload.movies];
     }
     return movies;
 }
