@@ -8,6 +8,7 @@ function reducer(movies, action) {
     }
     return movies;
 }
+
 function App() {
     const [movies, dispatch] = useReducer(reducer, []);
     return (
