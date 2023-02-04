@@ -1,14 +1,10 @@
-import { useState } from "react";
-
 import "./App.css";
-
+import MovieSearch from "./MovieSearch";
 const API_KEY = import.meta.env.VITE_API_KEY;
 function App() {
-    const [count, setCount] = useState(0);
-
     return (
         <div className="App">
-            <h1>Hello</h1>
+            <MovieSearch />
         </div>
     );
 }
