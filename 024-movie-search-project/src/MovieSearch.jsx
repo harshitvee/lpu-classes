@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function MovieSearch() {
+function MovieSearch({ dispatch }) {
     const [movieTitle, setMovieTitle] = useState("");
     async function searchMovies() {
         const searchURL = `https://www.omdbapi.com/?s=${movieTitle}&apikey=${
@@ -13,7 +13,12 @@ function MovieSearch() {
             );
         }
         const moviesData = await response.json();
-        console.log(moviesData);
+        console.log(moviesData.Search);
+        dispatch({
+            type: "ADD_MOVIES",
+            payload: { movies: moviesData.Search },
+        });
+        setMovieTitle("");
     }
 
     function handleSubmit(e) {
