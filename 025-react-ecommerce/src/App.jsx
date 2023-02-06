@@ -3,12 +3,10 @@ import {
     RouterProvider,
     createBrowserRouter,
     createRoutesFromElements,
-    Outlet,
 } from "react-router-dom";
-import About from "./pages/About";
-import Cart from "./pages/Cart";
-import RootLayout from "./layouts/RootLayout";
-import HomePage from "./pages/HomePage";
+
+import { About, Cart, HomePage, Products, Product } from "./pages";
+import { RootLayout } from "./layouts";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -16,6 +14,8 @@ const router = createBrowserRouter(
             <Route index element={<HomePage />} />
             <Route path="/about" element={<About />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/products/:id" element={<Product />} />
         </Route>
     )
 );
