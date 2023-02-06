@@ -3,15 +3,17 @@ import { useState } from "react";
 function MovieSearch({ dispatch }) {
     const [movieTitle, setMovieTitle] = useState("");
     async function searchMovies() {
-        const searchURL = `https://www.omdbapi.com/?s=${movieTitle}&apikey=${
+        const searchURL = `https://www.omdbapi.com/?s=${movieTitle}&apikey=aa${
             import.meta.env.VITE_API_KEY
         }`;
         const response = await fetch(searchURL);
+        console.log(response);
         if (!response.ok) {
             throw new Error(
                 `Something went Wrong, status code ${response.status}`
             );
         }
+        // json ---> javascript
         const moviesData = await response.json();
         console.log(moviesData.Search);
         dispatch({
