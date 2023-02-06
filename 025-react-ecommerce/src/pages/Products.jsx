@@ -1,31 +1,19 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-const products = [
-    {
-        id: "1",
-        name: "Phone",
-        price: 12000,
-        img: "https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        description:
-            "I'm baby waistcoat bodega boys trust fund disrupt tumeric whatever vexillologist. Cold-pressed raclette vice tousled etsy forage. Irony you probably haven't heard of them scenester, messenger bag tousled hammock stumptown tofu. Drinking vinegar chicharrones direct trade hoodie banh mi chia lo-fi bicycle rights iPhone XOXO pok pok austin ethical etsy.",
-    },
-    {
-        id: "2",
-        name: "TV",
-        price: 20000,
-        img: "https://images.pexels.com/photos/2251206/pexels-photo-2251206.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        description:
-            "I'm baby waistcoat bodega boys trust fund disrupt tumeric whatever vexillologist. Cold-pressed raclette vice tousled etsy forage. Irony you probably haven't heard of them scenester, messenger bag tousled hammock stumptown tofu. Drinking vinegar chicharrones direct trade hoodie banh mi chia lo-fi bicycle rights iPhone XOXO pok pok austin ethical etsy.",
-    },
-    {
-        id: "3",
-        name: "Laptop",
-        price: 30000,
-        img: "https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1600",
-        description:
-            "I'm baby waistcoat bodega boys trust fund disrupt tumeric whatever vexillologist. Cold-pressed raclette vice tousled etsy forage. Irony you probably haven't heard of them scenester, messenger bag tousled hammock stumptown tofu. Drinking vinegar chicharrones direct trade hoodie banh mi chia lo-fi bicycle rights iPhone XOXO pok pok austin ethical etsy.",
-    },
-];
+// using useEffect
+
+// using react router dom
+const URL = "http://localhost:3000/products";
 function Products() {
+    const [products, setProducts] = useState([]);
+    const fetchProducts = async () => {
+        const response = await fetch(URL);
+        const data = await response.json();
+        setProducts(data);
+    };
+    useEffect(() => {
+        fetchProducts();
+    }, []);
     return (
         <div>
             <h2>All products</h2>
