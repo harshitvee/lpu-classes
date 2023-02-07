@@ -8,24 +8,52 @@ import {
 import { About, Cart, HomePage, Products, Product } from "./pages";
 import { RootLayout } from "./layouts";
 
+import { productsLoader } from "./pages/Products";
+import { productLoader } from "./pages/Product";
+import { useReducer, createContext } from "react";
+
+const CartContext = createContext();
+
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route element={<RootLayout />} path="/">
             <Route index element={<HomePage />} />
             <Route path="/about" element={<About />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/products/:id" element={<Product />} />
+            <Route
+                path="/products"
+                element={<Products />}
+                loader={productsLoader}
+            />
+            <Route
+                path="/products/:id"
+                element={<Product />}
+                loader={productLoader}
+            />
         </Route>
     )
 );
+const initialCartState = [];
+function cartReducer(cartState, action) {
+    if (action.type === "ADD_PRODUCT") {
+        return [...cartState, action.payload];
+    }
+    return cartState;
+}
 
 function App() {
+    const [cartState, dispatch] = useReducer(cartReducer, initialCartState);
     return (
-        <div className="App">
-            <RouterProvider router={router} />
-        </div>
+        <CartContext.Provider
+            value={{ dispatch: dispatch, cartState: cartState }}
+        >
+            <div className="App">
+                <RouterProvider router={router} />
+            </div>
+        </CartContext.Provider>
     );
 }
 
 export default App;
+
+export { CartContext };

@@ -1,25 +1,30 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+
+import { ProductsURL } from "../constants";
 // using useEffect
 
-// using react router dom
-const URL = "http://localhost:3000/products";
+// using react router dom 6.4
+// step 1: create a loader function
+// step 2: export loader function
+// step 3 : import loader in app.js (where you have created routes) and set value of loader property
+// step 4 : import useLoaderData hook where you want to load data and call that hook.
+import { Link, useLoaderData } from "react-router-dom";
+
+const productsLoader = async () => {
+    const response = await fetch(ProductsURL);
+    const data = await response.json();
+    return data;
+};
+
 function Products() {
-    const [products, setProducts] = useState([]);
-    const fetchProducts = async () => {
-        const response = await fetch(URL);
-        const data = await response.json();
-        setProducts(data);
-    };
-    useEffect(() => {
-        fetchProducts();
-    }, []);
+    const products = useLoaderData();
     return (
         <div>
             <h2>All products</h2>
             {products.map((product) => {
                 return (
                     <div
+                        key={product.id}
                         style={{
                             border: "2px solid white",
                             margin: "1rem",
@@ -43,3 +48,4 @@ function Products() {
 }
 
 export default Products;
+export { productsLoader };
