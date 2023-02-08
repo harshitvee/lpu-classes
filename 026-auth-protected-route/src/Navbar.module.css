@@ -1,0 +1,21 @@
+.nav {
+    display: flex;
+    max-width: 1280px;
+    width: 90%;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+    height: 64px;
+}
+
+.navItems {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.navItem {
+    border-bottom: 1px solid white;
+}

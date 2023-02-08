@@ -5,7 +5,15 @@ import {
     createRoutesFromElements,
 } from "react-router-dom";
 
-import { About, Cart, HomePage, Products, Product } from "./pages";
+import {
+    About,
+    Cart,
+    HomePage,
+    Products,
+    Product,
+    ProtectedRoute,
+    Checkout,
+} from "./pages";
 import { RootLayout } from "./layouts";
 
 import { productsLoader } from "./pages/Products";
@@ -28,6 +36,15 @@ const router = createBrowserRouter(
             <Route
                 path="/products/:id"
                 element={<Product />}
+                loader={productLoader}
+            />
+            <Route
+                path="/checkout"
+                element={
+                    <ProtectedRoute>
+                        <Checkout />
+                    </ProtectedRoute>
+                }
                 loader={productLoader}
             />
         </Route>
