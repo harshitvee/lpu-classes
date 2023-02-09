@@ -5,22 +5,11 @@ import {
     createRoutesFromElements,
 } from "react-router-dom";
 
-import {
-    About,
-    Cart,
-    HomePage,
-    Products,
-    Product,
-    ProtectedRoute,
-    Checkout,
-} from "./pages";
+import { About, Cart, HomePage, Products, Product } from "./pages";
 import { RootLayout } from "./layouts";
 
 import { productsLoader } from "./pages/Products";
 import { productLoader } from "./pages/Product";
-import { useReducer, createContext } from "react";
-
-const CartContext = createContext();
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -38,39 +27,28 @@ const router = createBrowserRouter(
                 element={<Product />}
                 loader={productLoader}
             />
-            <Route
-                path="/checkout"
-                element={
-                    <ProtectedRoute>
-                        <Checkout />
-                    </ProtectedRoute>
-                }
-                loader={productLoader}
-            />
         </Route>
     )
 );
-const initialCartState = [];
-function cartReducer(cartState, action) {
-    if (action.type === "ADD_PRODUCT") {
-        return [...cartState, action.payload];
-    }
-    return cartState;
-}
 
 function App() {
-    const [cartState, dispatch] = useReducer(cartReducer, initialCartState);
     return (
-        <CartContext.Provider
-            value={{ dispatch: dispatch, cartState: cartState }}
-        >
-            <div className="App">
-                <RouterProvider router={router} />
-            </div>
-        </CartContext.Provider>
+        <div className="App">
+            <RouterProvider router={router} />
+        </div>
     );
 }
 
 export default App;
 
-export { CartContext };
+// state
+// usestate
+// handle form
+// props and children props
+// useReducer
+// context api
+// routing
+// protected routes
+// authentication
+
+// redux library --> (redux toolkit)

@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
-import { CartContext } from "../App";
+// import { CartContext } from "../App";
+import { CartContext } from "../contexts/cart_context";
 import { ProductsURL } from "../constants";
 
 const productLoader = async ({ params }) => {
