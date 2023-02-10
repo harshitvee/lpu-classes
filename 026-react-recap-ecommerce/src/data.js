@@ -1,4 +1,4 @@
-export const products = [
+export const productsList = [
     {
         id: "1",
         name: "One plus 10T",
@@ -6,7 +6,7 @@ export const products = [
         img: "https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1600",
         description:
             "I'm baby waistcoat bodega boys trust fund disrupt tumeric whatever vexillologist. Cold-pressed raclette vice tousled etsy forage. Irony you probably haven't heard of them scenester, messenger bag tousled hammock stumptown tofu. Drinking vinegar chicharrones direct trade hoodie banh mi chia lo-fi bicycle rights iPhone XOXO pok pok austin ethical etsy.",
-        quantity: 1000,
+        quantity: 0,
         category: "Phone",
         featured: true,
     },

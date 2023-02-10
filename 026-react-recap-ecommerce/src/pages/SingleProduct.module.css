@@ -1,0 +1,13 @@
+.singleProductContainer {
+    display: flex;
+    gap: 2rem;
+}
+.productImageContainer {
+    width: 50%;
+}
+.productImage {
+    width: 100%;
+}
+.productInfo {
+    width: 50%;
+}
